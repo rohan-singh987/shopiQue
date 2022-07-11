@@ -6,7 +6,7 @@ import { client } from '../lib/client';
  
 const Home = ({ products, bannerData, footerData }) => {
   return (
-    <div>
+    <div className='bg-gradient-to-t from-[#cebff3] via-[#c4cdd9e8] to-[#ebf5b3de]'>
       <HeroBanner heroBanner={bannerData && bannerData[0]} />
       {/* {console.log(footerData)} */}
       

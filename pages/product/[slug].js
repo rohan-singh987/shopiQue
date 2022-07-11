@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { client, urlFor } from '../../lib/client'
-// import { useStateContext } from '../../context/StateContext';
+import { useStateContext } from '../../context/StateContext';
 import { Product } from '../../components';
 
 
@@ -9,7 +9,7 @@ const ProductDetails = ({ product,products }) => {
 
   const [index, setIndex] = useState(0);
   const {image, name, details, price} = product;
-  // const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+  const { decQty, incQty, qty, onAdd, setShowCart, warn } = useStateContext();
 
   const handleBuyNow = () => {
     onAdd(product, qty);
@@ -17,9 +17,9 @@ const ProductDetails = ({ product,products }) => {
     setShowCart(true);
   }
   return (
-    <div>
-    <div className="product-detail-container">
-      <div>
+    <div className='bg-gradient-to-t from-[#cfcbd8] via-[#c4cdd9e8] to-[#ffffffde]'>
+    <div className="product-detail-container md:space-x-10">
+      <div className=''>
         <div className="image-container">
           <img src={urlFor(image && image[index])} className="product-detail-image" />
         </div>
@@ -55,13 +55,14 @@ const ProductDetails = ({ product,products }) => {
         <div className="quantity">
           <h3>Quantity:</h3>
           <p className="quantity-desc">
-            <span className="minus inline-flex  border-none" onClick="{decQty}"><AiOutlineMinus /></span>
-            <span className="num border-none">1 </span>
-            <span className="plus inline-flex  border-none" onClick="{incQty}"><AiOutlinePlus /></span>
+            <span className="minus inline-flex  border-none" onClick={decQty}><AiOutlineMinus /></span>
+            <span className="num border-none"> {qty} </span>
+            <span className="plus inline-flex  border-none" onClick={incQty}><AiOutlinePlus /></span>
           </p>
         </div>
-        <div className="buttons">
-          <button type="button" className="add-to-cart" onClick="{() => onAdd(product, qty)}">Add to Cart</button>
+          <div className=''> {warn} </div>
+        <div className="buttons flex sm:flex-row  flex-col sm:gap-6">
+          <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
           <button type="button" className="buy-now" onClick={handleBuyNow}>Buy Now</button>
         </div>
       </div>
