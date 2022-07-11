@@ -21,13 +21,13 @@ a {
 }
 
 .main-container{
-max-width: 1400px; 
+max-width: 1500px; 
 margin: auto;
 width: 100%;
 
 }
 .layout{
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .navbar-container{
@@ -493,8 +493,8 @@ padding: 30px 65px;
   align-items: center;
 }
 .product-detail-desc .buttons{
-  display: flex;
-  gap: 30px;
+  /* display: flex;
+  gap: 30px; */
 }
 .buttons .add-to-cart{
   padding: 10px 20px;
@@ -517,8 +517,8 @@ padding: 30px 65px;
   width: 200px;
 
   padding: 10px 20px;
-  background-image: linear-gradient(#91cdf2, #eda3aad4);
-  color: rgb(73, 71, 71);
+  background-image: linear-gradient(#6ab9ea, #f28c96d4);
+  color: rgb(251, 248, 248);
   border: none;
   border-radius: 10px;
   margin-top: 40px;
@@ -796,8 +796,8 @@ margin-top: 160px;
    }
    
   }
-  @media screen and (max-width: 428px){
-    hero-banner-container h1{
+  @media screen and (max-width:428px){
+    .hero-banner-container h1{
       font-size: 50px;
     } 
     .footer-banner-image{
