@@ -9,6 +9,7 @@ const Layout = ({children}) => {
     <div className='layout'>
       <Head>
         <title>ShopiQue</title>
+        <link rel="shortcut icon" href="Shopping.png" type="image/x-icon" />
       </Head>
 
       <header>

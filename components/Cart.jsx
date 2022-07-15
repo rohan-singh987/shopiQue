@@ -10,7 +10,7 @@ import { urlFor } from '../lib/client';
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove, warn } = useStateContext();
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
@@ -45,7 +45,7 @@ const Cart = () => {
         </button>
 
         {cartItems.length < 1 && (
-          <div className="empty-cart">
+          <div className="empty-cart ">
             <AiOutlineShopping size={150} />
             <h3>Your shopping bag is empty</h3>
             <Link href="/">
@@ -90,6 +90,7 @@ const Cart = () => {
               </div>
             </div>
           ))}
+          {/* <div className=''> {warn} </div> */}
         </div>
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
