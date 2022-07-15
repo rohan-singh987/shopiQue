@@ -10,14 +10,14 @@ const Footer = () => {
             <Link href='https://github.com/rohan-singh987'>
             <AiFillGithub />
             </Link>
-            <Link href='https://github.com/rohan-singh987'>
-            <AiFillInstagram />
-            </Link>
-            <Link href='https://github.com/rohan-singh987'>
+            <Link href='https://www.linkedin.com/in/rohan-singh-a783541b5/'>
             <AiFillLinkedin />
             </Link>
-            <Link href='https://github.com/rohan-singh987'>
+            <Link href='https://twitter.com/Rohan_Singh2003'>
             <AiOutlineTwitter />
+            </Link>
+            <Link href='//'>
+            <AiFillInstagram />
             </Link>
         </p>
     </div>
